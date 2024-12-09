@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buhofiles</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo blanco */
+            color: #212529; /* Texto negro */
+        }
+        .btn-primary {
+            background-color: #000; /* Botón negro */
+            border-color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #333; /* Botón negro más claro al pasar el ratón */
+        }
+        .card {
+            border: 1px solid #333; /* Bordes negros */
+        }
+        .card-header {
+            background-color: #000; /* Encabezado negro */
+            color: #fff; /* Texto blanco */
+        }
+        .form-control, .form-select {
+            border: 1px solid #000; /* Bordes negros */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <img src="{{ url_for('static', filename='img/buhofile.png') }}" alt="BuhoFile Logo" style="width: 160px;max-width: 100%; height: auto;">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header text-center">
+                        <h3>Buhofiles</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('compress.upload_files') }}" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="files" class="form-label">Selecciona archivos:</label>
+                                <input type="file" id="files" name="files" class="form-control" multiple required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="compression_level" class="form-label">Nivel de compresión:</label>
+                                <select id="compression_level" name="compression_level" class="form-select">
+                                    <option value="ZIP_STORED">Sin compresión</option>
+                                    <option value="ZIP_DEFLATED">Deflación (Normal)</option>
+                                </select>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Comprimir</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>Simplifica la gestión de tus archivos con estilo tuxedo.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JS (opcional para interactividad avanzada) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
