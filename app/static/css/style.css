@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa; /* Fondo blanco */
+    color: #212529; /* Texto negro */
+}
+.btn-primary {
+    background-color: #000; /* Botón negro */
+    border-color: #000;
+}
+.btn-primary:hover {
+    background-color: #333; /* Botón negro más claro al pasar el ratón */
+}
+.card {
+    border: 1px solid #333; /* Bordes negros */
+}
+.card-header {
+    background-color: #000; /* Encabezado negro */
+    color: #fff; /* Texto blanco */
+}
+.form-control, .form-select {
+    border: 1px solid #000; /* Bordes negros */
+}
+.buho-text {
+font-size: 70px; /* Tamaño del texto */
+font-weight: bold; /* Negrita */
+font-family: 'Arial', sans-serif; /* Fuente personalizada */
+margin-top: 105px;
+}
