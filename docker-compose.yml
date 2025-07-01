@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app/static/uploads:/app/app/static/uploads
+      - ./static/downloads:/app/app/static/downloads
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=1 

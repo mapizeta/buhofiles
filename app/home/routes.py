@@ -6,7 +6,7 @@ home_bp = Blueprint('home', __name__, url_prefix='/')
 def index():
     cards = [
     {"title": "Files to Zip", "icon": "bi-file-zip", "url": "/compress/"},
-    {"title": "Youtube to mp3", "icon": "bi-filetype-mp3", "url": "/youtube_to_mp3/"},
+    {"title": "Youtube to mp3", "icon": "bi-filetype-mp3", "url": "/youtube"},
     {"title": "Imgs to Pdf", "icon": "bi-image", "url": "/img_to_pdf/"},
     {"title": "Cbr to Pdf", "icon": "bi-file-pdf", "url": "/cbr_to_pdf/"},
     {"title": "MP3 to Wav", "icon": "bi-music-note", "url": "/mp3_to_wav/"},
